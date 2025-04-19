@@ -2,7 +2,9 @@
 var fileReader = new Reader();
 var fileDetailsCounter = new Counter();
 
-fileReader.ReadLinesFromFileAndPrint();
-fileDetailsCounter.CountLines();
-fileDetailsCounter.CountWords();
-fileDetailsCounter.CountChars();
+//fileReader.ReadLinesFromFileAndPrint();
+//fileDetailsCounter.CountLines();
+//fileDetailsCounter.CountWords();
+//fileDetailsCounter.CountChars();
+
+fileWriter.CreateFile();
