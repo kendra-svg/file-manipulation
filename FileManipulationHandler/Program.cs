@@ -10,6 +10,6 @@ var keywordFilter = new KeywordFilter();
 //fileDetailsCounter.CountWords();
 //fileDetailsCounter.CountChars();
 
-//fileWriter.CreateFile();
+fileWriter.CreateFile();
 
-keywordFilter.Filter();
+//keywordFilter.Filter();

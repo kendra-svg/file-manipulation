@@ -11,8 +11,7 @@ public class Writer
         string fileNameWithExtension;
         bool exceptionCaught = false;
         string validatedFile = string.Empty;
-        bool isSecondOrMoreAttemps = false;
-
+        string timeStamp = DateTime.Now.ToString("yyyyMMddHHmmssfff");
 
         do
         {
@@ -40,13 +39,13 @@ public class Writer
             if (!string.IsNullOrEmpty(validatedFile))
             {
                              
-                fileNameWithExtension = validatedFile + ".txt";
+                fileNameWithExtension = validatedFile + $"_{timeStamp}.txt";
                 var fullPath = Path.Combine(folderPath, fileNameWithExtension);
 
 
                 try
                 {
-                    //var createFile = File.Create(fullPath); //This is recommended to use when you don't have to add content to the file. If you have to add content to the file, better use .WriteAllText as it will create the file and content all in once.
+                    //var createFile = File.Create(fullPath); //This is recommended to use when you don't have to add content to the file. If you have to add content to the file, better use .WriteAllText as it will create the file and content all at once.
                     Console.WriteLine($"Insert the text you want to add to the {fileNameWithExtension} file");
                     string userInput = Console.ReadLine();
                     File.WriteAllText(fullPath, userInput);
